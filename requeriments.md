@@ -53,4 +53,5 @@ PyCharm permet crear una connexio a la base de dades, la qual nomes serveix per 
 - [Documentació python i MongoDB](https://www.w3schools.com/python/)
 - [Curs de Django a Youtube](https://www.youtube.com/playlist?list=PLU8oAlHdN5BmfvwxFO7HdPciOCmmYneAB)
 - [Web a replicar](https://news.ycombinator.com/)
+- [Llibreria de rest](https://www.django-rest-framework.org/)
 <br><br>Fins aquí l'explicació de com instal·lar-se les coses. Si teniu qualsevol problema, dubte o necessitat, digueu-m'ho. També sentiu-vos lliures de completar aquesta petita guia.

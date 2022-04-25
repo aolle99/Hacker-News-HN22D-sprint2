@@ -16,3 +16,4 @@ tzdata==2022.1
 virtualenv==20.14.1
 whitenoise==6.0.0
 djangorestframework==3.13.1
+django-cors-headers==3.11.0
