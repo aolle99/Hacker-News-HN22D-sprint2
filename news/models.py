@@ -2,7 +2,6 @@ from datetime import datetime
 
 from django.conf import settings
 from django.db import models
-
 # Create your models here.
 class SubmissionType(models.Model):
     name = models.CharField(max_length=30, unique=True)
@@ -23,10 +22,8 @@ class Submission(models.Model):
     url = models.URLField(blank=True)
     text = models.TextField(blank=True)
     points = models.PositiveIntegerField(default=1)
-    comments = models.ManyToManyField(settings.AUTH_USER_MODEL, through='Comment', related_name="comments",
-                                      through_fields=('submission', 'user'))
-    votes = models.ManyToManyField(settings.AUTH_USER_MODEL, through='Vote', related_name="votes",
-                                   through_fields=('submission', 'user'))
+    comments = models.ManyToManyField(settings.AUTH_USER_MODEL, through='comment.Comment', related_name="comments", through_fields=('submission', 'user'))
+    votes = models.ManyToManyField(settings.AUTH_USER_MODEL, through='vote.Vote', related_name="votes", through_fields=('submission', 'user'))
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
