@@ -25,7 +25,7 @@ class Comment(models.Model):
     type = models.ForeignKey(ActionType, on_delete=models.RESTRICT)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     text = models.TextField(null=False, blank=False)
-    comments = models.ManyToManyField(settings.AUTH_USER_MODEL, through='comment.Comment', related_name="comment_comments", through_fields=('replied_comment', 'user'))
+    comments = models.ManyToManyField(settings.AUTH_USER_MODEL, through='self', related_name="comment_comments", through_fields=('replied_comment', 'user'),symmetrical=False)
     votes = models.ManyToManyField(settings.AUTH_USER_MODEL, through='vote.Vote', related_name="comment_votes", through_fields=('comment', 'user'))
     created_at = models.DateTimeField(auto_now_add=True)
 
